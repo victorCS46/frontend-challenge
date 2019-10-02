@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import { thisTypeAnnotation } from '@babel/types';
 
 export default class Buscar extends React.Component {
 
@@ -35,11 +36,15 @@ export default class Buscar extends React.Component {
         const data = await response.json();
         console.log(data);
         this.setState({ items: data, isSubmit: true});
+        if(this.i > 6){
+            this.i = 6;
+        }
+        console.log(this.i);
     }
 
     async loadMore(e){
         e.preventDefault();
-        this.i = this.i + 3; 
+        this.i = this.i + 6; 
         if(this.i>=60){
             this.i = 60;
         }
@@ -58,7 +63,7 @@ export default class Buscar extends React.Component {
             
             <div>
                 <div className="header">
-                    <img id="react_icon" src="logo192.png"></img>
+                    <img id="react_icon" src="logo192.png" alt="React?"></img>
                     <h1>VACS</h1>
                     <span>Github repositories search bar</span>
                 </div>
@@ -66,7 +71,7 @@ export default class Buscar extends React.Component {
                     <br></br>
                     <br></br>
                     <br></br>
-                    <input type="text" placeholder="     repository name" name="buscar" onChange={this.handleChange} />
+                    <input type="text" placeholder="  repository name" name="buscar" onChange={this.handleChange} />
                     <button type="submit">Buscar</button>
                 </form>
 
