@@ -22,7 +22,7 @@
 }
 
 img{
-  max-width: 80%;
+  max-width: 100%;
   height: 250px;
   
 }
@@ -44,9 +44,10 @@ img{
   
 }
 .div_capsule:hover{
-   background-color: rgb(167, 163, 163);
+   background-color: #404040;
    color: white;
-   transition: 0.5s;
+   transition: all 0.5s ease 0s;
+
 }
 
 .div_image{
@@ -100,4 +101,14 @@ input{
   letter-spacing: 3px;
   background: grey;
   transition: all 0.3s ease 0s;
+  }
+
+  .vcs-description{
+    color: #8b8787
+  }
+  .vcs-language{
+    background-color: #837a7a;
+    border: 1px solid #404040;
+    border-radius: 5px; 
+    text-indent: 3px;
   }

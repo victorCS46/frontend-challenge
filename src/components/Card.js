@@ -21,8 +21,8 @@ export default class Card extends React.Component {
                         <img src={item.owner.avatar_url} alt="No se encuentra imagen"></img>  
                     </div>
                     <div>{item.full_name}</div>  
-                    <div>{item.language}</div>  
-                    <div>{item.description}</div>
+                    <div><span className="vcs-language">{item.language}</span></div>  
+                    <div className="vcs-description">{item.description}</div>
                     <div>Issues: {item.open_issues}</div>
                     <div>Stars: {item.stargazers_count}</div><br></br>
                 </div>
