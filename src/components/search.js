@@ -58,7 +58,7 @@ export default class Buscar extends React.Component {
 
     async topCon(e){
         e.preventDefault();
-        const response = await fetch(`https://api.github.com/search/repositories?q=${this.state.buscar}&per_page=`+this.i);
+        const response = await fetch(`https://api.github.com/repo/${this.state.items}?q=${this.state.buscar}&per_page=`+this.i);
         const data = await response.json();
         console.log(data);
         this.setState({ items: data, isSubmit: true});

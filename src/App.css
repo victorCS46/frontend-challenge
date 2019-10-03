@@ -22,9 +22,8 @@
 }
 
 img{
-  max-width: 100%;
-  height: 250px;
-  
+  width: 100%;
+  height: 260px;
 }
 
 #react_icon{
@@ -52,6 +51,7 @@ img{
 
 .div_image{
    background-color: white;
+
 }
 
 .div_container{
@@ -93,6 +93,7 @@ input{
     display: inline-block;
     transition: all 0.3s ease 0s;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 .vcs-btn:hover {
@@ -103,12 +104,51 @@ input{
   transition: all 0.3s ease 0s;
   }
 
-  .vcs-description{
-    color: #8b8787
+
+.vcs-description{
+    color: #8b8787; 
+    font-size: 0.78vw;
   }
-  .vcs-language{
-    background-color: #837a7a;
-    border: 1px solid #404040;
-    border-radius: 5px; 
+
+.vcs-language{
+    background-color: #665f5f;
+    color: white;
+    border: 0px solid #302f2f;
+    border-radius: 25px; 
     text-indent: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .vcs-issues{
+    background-color: #922323;
+    color: white;
+    border: 0px solid #302f2f;
+    border-radius: 25px; 
+    text-indent: 3px;
+    margin-right: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .vcs-stars{
+    background-color: #a78407;
+    color: white;
+    border: 0px solid #302f2f;
+    border-radius: 25px; 
+    text-indent: 3px;
+    margin-left: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .vcs-contributor{
+    background-color: #23619b;
+    color: white;
+    border: 0px solid #302f2f;
+    border-radius: 25px; 
+    text-indent: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
   }
