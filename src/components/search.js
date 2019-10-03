@@ -58,7 +58,7 @@ export default class Buscar extends React.Component {
 
     async topCon(e){
         e.preventDefault();
-        const response = await fetch(`https://api.github.com/repo/${this.state.items}?q=${this.state.buscar}&per_page=`+this.i);
+        const response = await fetch(`https://api.github.com/repo/${this.state.items}`);
         const data = await response.json();
         console.log(data);
         this.setState({ items: data, isSubmit: true});
@@ -66,9 +66,7 @@ export default class Buscar extends React.Component {
 
 
     }
-
     
-
     render() {
         const { isSubmit } = this.state;
         return (
@@ -96,7 +94,7 @@ export default class Buscar extends React.Component {
                 <form onSubmit={this.loadMore}>
                     <button className="vcs-btn" id="load" type="submit">Load More...</button>
                 </form>
-                {this.i>=60 ? document.getElementById("load").disable=true : ''}
+                {console.log('i=',this.i)}
                 
 
 
