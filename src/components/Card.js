@@ -13,11 +13,13 @@ export default class Card extends React.Component {
     */
 
     render() {
-        var hey = this.props.data.map((item) => 
+        let hey = this.props.data.map((item) => 
             /*Datos de los repositorios*/
-            <a className="vc_a" href={item.html_url}>
+            <a className="vc_a" href={item.html_url} key={item.id}>
                 <div className="div_capsule" key={item.id}>
-                    <img src={item.owner.avatar_url} alt="No se encuentra imagen"></img>  
+                    <div className="div_image">
+                        <img src={item.owner.avatar_url} alt="No se encuentra imagen"></img>  
+                    </div>
                     <div>{item.full_name}</div>  
                     <div>{item.language}</div>  
                     <div>{item.description}</div>

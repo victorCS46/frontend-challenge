@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from './Card';
-import { thisTypeAnnotation } from '@babel/types';
 
 export default class Buscar extends React.Component {
 
@@ -11,6 +10,7 @@ export default class Buscar extends React.Component {
             buscar: '',
             items: [],
             isSubmit: false,
+            
 
         };
         this.i = 6;
@@ -44,7 +44,7 @@ export default class Buscar extends React.Component {
 
     async loadMore(e){
         e.preventDefault();
-        this.i = this.i + 6; 
+        this.i = this.i + 3; 
         if(this.i>=60){
             this.i = 60;
         }
@@ -53,6 +53,18 @@ export default class Buscar extends React.Component {
         console.log(data);
         this.setState({ items: data, isSubmit: true});
         window.scrollTo(0,document.body.scrollHeight);
+        console.log(this.i);
+    }
+
+    async topCon(e){
+        e.preventDefault();
+        const response = await fetch(`https://api.github.com/search/repositories?q=${this.state.buscar}&per_page=`+this.i);
+        const data = await response.json();
+        console.log(data);
+        this.setState({ items: data, isSubmit: true});
+        
+
+
     }
 
     
@@ -71,8 +83,8 @@ export default class Buscar extends React.Component {
                     <br></br>
                     <br></br>
                     <br></br>
-                    <input type="text" placeholder="  repository name" name="buscar" onChange={this.handleChange} />
-                    <button type="submit">Buscar</button>
+                    <input type="text" placeholder="Repository name" name="buscar" onChange={this.handleChange} />
+                    <button className="vcs-btn" type="submit">Buscar</button>
                 </form>
 
 
@@ -82,7 +94,7 @@ export default class Buscar extends React.Component {
                     <br></br>
                     <br></br> 
                 <form onSubmit={this.loadMore}>
-                    <button id="load" type="submit">Load More...</button>
+                    <button className="vcs-btn" id="load" type="submit">Load More...</button>
                 </form>
                 {this.i>=60 ? document.getElementById("load").disable=true : ''}
                 
