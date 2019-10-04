@@ -28,7 +28,7 @@
 }
 
 img{
-  max-width: 80%;
+  width: 100%;
   height: 220px;
 }
 
@@ -42,19 +42,18 @@ img{
 }
 
 .div_capsule{
-  width: 300px;
+  width: 270px;
   height: 460px;
   float: left;
   margin: 33px;
-  margin-left:150px;
+  margin-left: 168px;
   overflow: hidden;
   border: 5px solid black;
   border-radius: 35px;
-  transition: all 1.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 .div_capsule:hover{
-  background-color: #404040;
-  color: white;
+  background-color: #dadada;
   transition: all 0.5s ease 0s;
 
 }
@@ -114,9 +113,14 @@ input{
   transition: all 0.3s ease 0s;
 }
 
+span{
+  margin-left: 3px;
+  margin-right: 3px; 
+}
 .vcs-description{
   color: #8b8787; 
   font-size: 0.9vw;
+  margin-top: 9px;
 }
 
 .vcs-language{
@@ -164,4 +168,10 @@ input{
 .vcs-contributor:hover{
   font-size: 19px !important;
   transition: all 0.3s ease 0s;
+}
+
+.vcs-repo_name{
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 4px;
 }

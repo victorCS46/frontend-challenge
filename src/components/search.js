@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import Contact from './ConCard';
 
 export default class Buscar extends React.Component {
     
@@ -15,12 +16,6 @@ export default class Buscar extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.loadMore = this.loadMore.bind(this);
-
-    }
-
-    hide(e){
-        e.preventDefault();
-        document.getElementById("load").style.display = "none";
     }
 
     handleChange(e) {
@@ -75,9 +70,7 @@ export default class Buscar extends React.Component {
     
     render() {
         const { isSubmit } = this.state;
-        
         return (
-            
             <div>
                 <div className="header">
                     <img id="react_icon" src="logo192.png" alt="React?"></img>
@@ -92,14 +85,14 @@ export default class Buscar extends React.Component {
                     <button className="vcs-btn" type="submit">Buscar</button>
                 </form>
                 {console.log('hey',isSubmit)}   
-                {isSubmit ?  <Card data={this.state.items.items} /> : ''} 
+                {isSubmit ?  <Card data={this.state.items.items} /> : ''}
+                {isSubmit ?  <Contact data={this.state.items.items} /> : ''}
                     <br></br>
                     <br></br>
                     <br></br> 
                 <form onSubmit={this.loadMore}>
                     <center><button className="vcs-btn" id="load" type="submit">Load More...</button></center>    
                 </form>
-            </div>
-        )
+            </div>)
     }
 }
