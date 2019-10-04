@@ -35,13 +35,13 @@ export default class Buscar extends React.Component {
     async handleSubmit(e) {
         e.preventDefault();
         this.i = this.i;
+        if(this.i > 6){
+            this.i = 6;
+        }
         const response = await fetch(`https://api.github.com/search/repositories?q=${this.state.buscar}&per_page=`+this.i);
         const data = await response.json();
         console.log(data);
         this.setState({ items: data, isSubmit: true});
-        if(this.i > 6){
-            this.i = 6;
-        }
         document.getElementById("load").style.display = "block";
         console.log(this.i);
     }
@@ -91,8 +91,6 @@ export default class Buscar extends React.Component {
                     <input type="text" placeholder="Repository name" name="buscar" onChange={this.handleChange} />
                     <button className="vcs-btn" type="submit">Buscar</button>
                 </form>
-
-
                 {console.log('hey',isSubmit)}   
                 {isSubmit ?  <Card data={this.state.items.items} /> : ''} 
                     <br></br>
