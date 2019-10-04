@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 
 export default class Buscar extends React.Component {
-
+    
     constructor(props) {
         super(props);
 
@@ -10,18 +10,21 @@ export default class Buscar extends React.Component {
             buscar: '',
             items: [],
             isSubmit: false,
-            
-
         };
         this.i = 6;
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.loadMore = this.loadMore.bind(this);
+
+    }
+
+    hide(e){
+        e.preventDefault();
+        document.getElementById("load").style.display = "none";
     }
 
     handleChange(e) {
         e.preventDefault();
-
         this.setState({
             ...this.state,
             [e.target.name]: e.target.value,
@@ -39,22 +42,25 @@ export default class Buscar extends React.Component {
         if(this.i > 6){
             this.i = 6;
         }
+        document.getElementById("load").style.display = "block";
         console.log(this.i);
     }
 
     async loadMore(e){
         e.preventDefault();
         this.i = this.i + 3; 
-        if(this.i>=60){
-            this.i = 60;
+        if(this.i>=30){
+            this.i = 30;
+            document.getElementById("load").style.display = "none";
         }
         const response = await fetch(`https://api.github.com/search/repositories?q=${this.state.buscar}&per_page=`+this.i);
         const data = await response.json();
         console.log(data);
         this.setState({ items: data, isSubmit: true});
         window.scrollTo(0,document.body.scrollHeight);
-        console.log(this.i);
+        console.log('i =',this.i);
     }
+    
 
     async topCon(e){
         e.preventDefault();
@@ -69,6 +75,7 @@ export default class Buscar extends React.Component {
     
     render() {
         const { isSubmit } = this.state;
+        
         return (
             
             <div>
@@ -86,18 +93,14 @@ export default class Buscar extends React.Component {
                 </form>
 
 
-                {console.log('hey', isSubmit)}   
+                {console.log('hey',isSubmit)}   
                 {isSubmit ?  <Card data={this.state.items.items} /> : ''} 
                     <br></br>
                     <br></br>
                     <br></br> 
                 <form onSubmit={this.loadMore}>
-                    <button className="vcs-btn" id="load" type="submit">Load More...</button>
+                    <center><button className="vcs-btn" id="load" type="submit">Load More...</button></center>    
                 </form>
-                {console.log('i=',this.i)}
-                
-
-
             </div>
         )
     }

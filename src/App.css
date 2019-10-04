@@ -32,9 +32,13 @@ img{
   height: 220px;
 }
 
+#load{
+  display: none;
+}
+
 #react_icon{
-   width: 100px;
-   height: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .div_capsule{
@@ -49,9 +53,9 @@ img{
   transition: all 1.5s ease 0s;
 }
 .div_capsule:hover{
-   background-color: #404040;
-   color: white;
-   transition: all 0.5s ease 0s;
+  background-color: #404040;
+  color: white;
+  transition: all 0.5s ease 0s;
 
 }
 
@@ -89,17 +93,17 @@ input{
 }
 
 .vcs-btn{
-    border: none;
-    background: #404040;
-    color: #ffffff !important;
-    font-weight: 100;
-    font-size: 13px;
-    padding: 16px 20px;
-    text-transform: uppercase;
-    display: inline-block;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    margin-bottom: 5px;
+  border: none;
+  background: #404040;
+  color: #ffffff !important;
+  font-weight: 100;
+  font-size: 13px;
+  padding: 16px 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  margin-bottom: 5px;
 }
 
 .vcs-btn:hover {
@@ -159,6 +163,5 @@ input{
 }
 .vcs-contributor:hover{
   font-size: 19px !important;
-  
   transition: all 0.3s ease 0s;
 }

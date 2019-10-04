@@ -14,7 +14,7 @@ export default class Card extends React.Component {
    
 
     render() {
-        let contributor = this.props.data.map((item) => `https://api.github.com/repos/${item.owner.login}/${item.name}/stats/contributors`);
+        
         let hey = this.props.data.map((item) => 
             /*Datos de los repositorios*/
             
