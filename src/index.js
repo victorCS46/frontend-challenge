@@ -3,23 +3,20 @@ import ReactDOM from 'react-dom';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import Buscar from './components/search';
-import Contact from './components/ConCard';
+//import Buscar from './components/search';
+import Contributors from './components/ConCard';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
     <Router>
-      <div className="App">
+      <div className="App-routing">
         <ul>
             <span>
              <Link to="/">Home</Link>
             </span>
-            <span>
-             <Link to="/components/contact">Contact</Link>
-            </span>
         </ul>
         <Route exact path="/" component={App} />
-        <Route path="/components/contact" component={Contact} />
+        <Route path="/components/contributors" component={Contributors} />
       </div>
     </Router>
   )

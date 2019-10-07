@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import Contact from './ConCard';
+// import Contributors from './ConCard';
 
 export default class Buscar extends React.Component {
     
@@ -38,7 +38,7 @@ export default class Buscar extends React.Component {
         console.log(data);
         this.setState({ items: data, isSubmit: true});
         document.getElementById("load").style.display = "block";
-        console.log(this.i);
+        console.log('i =',this.i);
     }
 
     async loadMore(e){
@@ -54,18 +54,6 @@ export default class Buscar extends React.Component {
         this.setState({ items: data, isSubmit: true});
         window.scrollTo(0,document.body.scrollHeight);
         console.log('i =',this.i);
-    }
-    
-
-    async topCon(e){
-        e.preventDefault();
-        const response = await fetch(`https://api.github.com/repo/${this.state.items}`);
-        const data = await response.json();
-        console.log(data);
-        this.setState({ items: data, isSubmit: true});
-        
-
-
     }
     
     render() {
@@ -86,7 +74,7 @@ export default class Buscar extends React.Component {
                 </form>
                 {console.log('hey',isSubmit)}   
                 {isSubmit ?  <Card data={this.state.items.items} /> : ''}
-                {isSubmit ?  <Contact data={this.state.items.items} /> : ''}
+                {/* {isSubmit ?  <Contributors data={this.state.items.items} /> : ''} */}
                     <br></br>
                     <br></br>
                     <br></br> 

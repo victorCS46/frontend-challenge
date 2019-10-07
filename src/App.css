@@ -1,13 +1,19 @@
 .App {
-  text-align: center;
+  text-align: center; 
 }
 
 .App-logo {
   height: 40vmin;
 }
 
+.App-routing{
+  text-align: center;
+
+
+}
+
 .App-header {
-  background-color: white;
+  background-color: #081a35;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,8 +33,13 @@
   
 }
 
+.vcs-con_img{
+  width: 100px;
+  height: 100px;
+}
+
 img{
-  width: 100%;
+  max-width: 80%;
   height: 220px;
 }
 
