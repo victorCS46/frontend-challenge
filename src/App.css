@@ -34,8 +34,8 @@
 }
 
 .vcs-con_img{
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
 }
 
 img{
@@ -180,6 +180,14 @@ span{
   font-size: 19px !important;
   transition: all 0.3s ease 0s;
 }
+
+.vcs-contributor_div{
+  float: none;
+  border: 1px solid black;
+  width: 150px;
+}
+
+.vcs-con_name{}
 
 .vcs-repo_name{
   font-weight: bold;

@@ -5,8 +5,9 @@ class Contributors extends React.Component {
     super(props);
     this.state = {
       repo: [],
+      i: 10,
     }
-    //this.con = this.con.bind(this);
+    this.loadMore = this.loadMore.bind(this);
   }
 
   // async con(e) {
@@ -18,6 +19,17 @@ class Contributors extends React.Component {
   //     // this.setState({repo: data})
   //   });
   // }
+
+  loadMore(e){
+    e.preventDefault();
+    this.setState((actual)=>{
+      return {i: actual.i + 5};
+    })
+    if(this.state.i>=25){
+      document.getElementById("contributor_load").style.display = "none";
+  }
+    console.log(this.state.i);
+  }
 
   async componentDidMount() {
     console.log(this.props);
@@ -33,19 +45,23 @@ class Contributors extends React.Component {
 
   render() {
     console.log(this.state.repo);
-    let x = this.state.repo.map((item)=>
-        <div key ={item.id}>
+    let x = this.state.repo.slice(0,this.state.i).map((item)=>
+        <center key ={item.id}><div key ={item.id} className="vcs-contributor_div">
           <div>
             <img className="vcs-con_img" src={item.avatar_url} alt="not found!!"/>
           </div>
-          <div>{item.login}</div>
-          <div>{item.contributions}</div>
-        </div>,
+          <div className="vcs-con_name">{item.login}</div>
+          <div className="vcs-con_name">{item.contributions}</div>
+        </div>
+        </center>
     );
   // console.log(this.state.repo);
     return (
       <div>
         <div>{x}</div>
+        <form onSubmit={this.loadMore}> 
+            <button id="contributor_load">Load more</button>
+        </form>
       </div>
 
     )
