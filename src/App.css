@@ -9,7 +9,6 @@
 .App-routing{
   text-align: center;
 
-
 }
 
 .App-header {
@@ -187,7 +186,9 @@ span{
   width: 150px;
 }
 
-.vcs-con_name{}
+.vcs-con_name{
+
+}
 
 .vcs-repo_name{
   font-weight: bold;

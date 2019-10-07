@@ -8,8 +8,8 @@ import Contributors from './components/ConCard';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
-    <Router>
-      <div className="App-routing">
+    <Router className="App-routing">
+      <div>
         <ul>
             <span>
              <Link to="/">Home</Link>

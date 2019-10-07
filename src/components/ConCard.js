@@ -60,7 +60,7 @@ class Contributors extends React.Component {
       <div>
         <div>{x}</div>
         <form onSubmit={this.loadMore}> 
-            <button id="contributor_load">Load more</button>
+            <button id="contributor_load" className="vcs-btn">Load more</button>
         </form>
       </div>
 
