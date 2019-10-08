@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import Perfiles from './components/Card';
+import Buscar from './components/search';
 
 
 class App extends Component {
@@ -11,10 +11,9 @@ class App extends Component {
    render(){
      return(
        <div className="App">
-         <Perfiles />
+         <Buscar />
        </div>
      )
    }
 }
-
 export default App;
