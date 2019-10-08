@@ -27,7 +27,7 @@ class Contributors extends React.Component {
     })
     if(this.state.i>=25){
       document.getElementById("contributor_load").style.display = "none";
-  }
+    }
     console.log(this.state.i);
   }
 
@@ -46,23 +46,19 @@ class Contributors extends React.Component {
   render() {
     console.log(this.state.repo);
     let x = this.state.repo.slice(0,this.state.i).map((item)=>
-        <center key ={item.id}><div key ={item.id} className="vcs-contributor_div">
-          <div>
-            <img className="vcs-con_img" src={item.avatar_url} alt="not found!!"/>
+        <center key ={item.id}>
+          <div key ={item.id} className="vcs-contributor_div">
+            <div>
+              <img className="vcs-con_img" src={item.avatar_url} alt="not found!!"/>
+            </div>
+            <div className="vcs-con_name"><a href={item.html_url}>{item.login}</a></div>
+            <div className="vcs-con_name">({item.contributions} Contributions)</div>
           </div>
-          <div className="vcs-con_name">{item.login}</div>
-<<<<<<< HEAD
-          <div className="vcs-con_name">({item.contributions} Contributions)</div>
-=======
-          <div className="vcs-con_name">{item.contributions}</div>
->>>>>>> 6cf13f836a230ab26dc5b9c27969f7bc1c75524e
-        </div>
         </center>
     );
   // console.log(this.state.repo);
     return (
       <div>
-<<<<<<< HEAD
         <div className="header">
             <h1>VACS</h1>
             <span>Github repositories Top Contributors</span>
@@ -73,12 +69,6 @@ class Contributors extends React.Component {
             <button id="contributor_load" className="vcs-btn">Load more</button>
         </form>
         </center>
-=======
-        <div>{x}</div>
-        <form onSubmit={this.loadMore}> 
-            <button id="contributor_load" className="vcs-btn">Load more</button>
-        </form>
->>>>>>> 6cf13f836a230ab26dc5b9c27969f7bc1c75524e
       </div>
 
     )

@@ -9,17 +9,10 @@ import * as serviceWorker from './serviceWorker';
 
 const routing = (
     <Router>
-<<<<<<< HEAD
       <div>
         <ul className="App-routing">
             <span>
              <Link className="vcs-route" to="/">Home</Link>
-=======
-      <div className="App-routing">
-        <ul>
-            <span>
-             <Link to="/">Home</Link>
->>>>>>> 6cf13f836a230ab26dc5b9c27969f7bc1c75524e
             </span>
         </ul>
         <Route exact path="/" component={App} />
