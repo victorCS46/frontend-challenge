@@ -8,6 +8,7 @@
 
 .App-routing{
   text-align: center;
+<<<<<<< HEAD
   background-color:#081a35;
   margin: auto;
 }
@@ -15,6 +16,9 @@
 .vcs-route{
   color: white;
   margin-right: 42px;
+=======
+
+>>>>>>> 6cf13f836a230ab26dc5b9c27969f7bc1c75524e
 }
 
 .App-header {
@@ -40,8 +44,12 @@
 
 .vcs-con_img{
   width: 50px;
+<<<<<<< HEAD
   height: 100%;
   float: left;
+=======
+  height: 50px;
+>>>>>>> 6cf13f836a230ab26dc5b9c27969f7bc1c75524e
 }
 
 img{
@@ -120,7 +128,10 @@ input{
   transition: all 0.3s ease 0s;
   cursor: pointer;
   margin-bottom: 5px;
+<<<<<<< HEAD
   margin-top: 5px;
+=======
+>>>>>>> 6cf13f836a230ab26dc5b9c27969f7bc1c75524e
 }
 
 .vcs-btn:hover {
@@ -191,6 +202,7 @@ span{
 .vcs-contributor_div{
   float: none;
   border: 1px solid black;
+<<<<<<< HEAD
   width: 250px;
   height: 50px;
   margin-top: 16px;
@@ -200,6 +212,13 @@ span{
 
 .vcs-con_name{
   background-color: azure;
+=======
+  width: 150px;
+}
+
+.vcs-con_name{
+
+>>>>>>> 6cf13f836a230ab26dc5b9c27969f7bc1c75524e
 }
 
 .vcs-repo_name{
