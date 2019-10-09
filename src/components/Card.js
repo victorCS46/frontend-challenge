@@ -39,7 +39,7 @@ export default class Card extends React.Component {
        
         return (
             <div>
-                <div className="div_container">{hey}</div>
+                <div className="div_container">{hey}</div>   
             </div>
         )
     }

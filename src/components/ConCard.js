@@ -28,7 +28,7 @@ class Contributors extends React.Component {
     if(this.state.i>=25){
       document.getElementById("contributor_load").style.display = "none";
     }
-    console.log(this.state.i);
+    // console.log(this.state.i);
   }
 
   async componentDidMount() {
@@ -36,15 +36,18 @@ class Contributors extends React.Component {
       const hey = async () => {
         const response = await fetch(`${this.props.location.state.repo}`);
         const data = await response.json();
-        console.log(data)
+        // console.log(data);
         this.setState({ repo: data });
+        if(data.length <= 10){
+          document.getElementById("contributor_load").style.display = "none";
+        }
       }
       hey();
   }
 
 
   render() {
-    console.log(this.state.repo);
+    // console.log(this.state.repo);
     let x = this.state.repo.slice(0,this.state.i).map((item)=>
         <center key ={item.id}>
           <div key ={item.id} className="vcs-contributor_div">
@@ -67,7 +70,7 @@ class Contributors extends React.Component {
         <center>
           <form onSubmit={this.loadMore}> 
             <button id="contributor_load" className="vcs-btn">Load more</button>
-        </form>
+          </form>
         </center>
       </div>
 

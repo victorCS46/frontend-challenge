@@ -24,7 +24,7 @@ export default class Buscar extends React.Component {
             ...this.state,
             [e.target.name]: e.target.value,
         })
-        console.log(this.state);
+        // console.log(this.state);
     }
     
     async handleSubmit(e) {
@@ -35,10 +35,10 @@ export default class Buscar extends React.Component {
         }
         const response = await fetch(`https://api.github.com/search/repositories?q=${this.state.buscar}&per_page=`+this.i);
         const data = await response.json();
-        console.log(data);
+        //console.log(data);
         this.setState({ items: data, isSubmit: true});
         document.getElementById("load").style.display = "block";
-        console.log('i =',this.i);
+        // console.log('i =',this.i);
     }
 
     async loadMore(e){
@@ -50,10 +50,10 @@ export default class Buscar extends React.Component {
         }
         const response = await fetch(`https://api.github.com/search/repositories?q=${this.state.buscar}&per_page=`+this.i);
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         this.setState({ items: data, isSubmit: true});
         window.scrollTo(0,document.body.scrollHeight);
-        console.log('i =',this.i);
+        // console.log('i =',this.i);
     }
     
     render() {
@@ -65,19 +65,13 @@ export default class Buscar extends React.Component {
                     <h1>VACS</h1>
                     <span>Github repositories search bar</span>
                 </div>
-                <form onSubmit={this.handleSubmit}>
-                    <br></br>
-                    <br></br>
-                    <br></br>
+                <form onSubmit={this.handleSubmit} style={{paddingTop: '15px'}}>
                     <input type="text" placeholder="Repository name" name="buscar" onChange={this.handleChange} />
-                    <button className="vcs-btn" type="submit">Buscar</button>
+                    <button style={this.state.buscar ? {display:''} : {display: 'none'}} id="src_btn" className="vcs-btn" type="submit">Buscar</button>
                 </form>
-                {console.log('hey',isSubmit)}   
+                {/* {console.log('hey',isSubmit)}    */}
                 {isSubmit ?  <Card data={this.state.items.items} /> : ''}
                 {/* {isSubmit ?  <Contributors data={this.state.items.items} /> : ''} */}
-                    <br></br>
-                    <br></br>
-                    <br></br> 
                 <form onSubmit={this.loadMore}>
                     <center><button className="vcs-btn" id="load" type="submit">Load More...</button></center>    
                 </form>
