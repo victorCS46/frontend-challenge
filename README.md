@@ -11,14 +11,14 @@ Como iniciar el proyecto en tu equipo:
  - (Opcional): Si quieres clonar el repositorio pero con un nombre para el directorio a tu gusto puedes ejecutarlo de la   siguiente manera:
     ##### `git clone git@github.com:victorCS46/frontend-challenge.git <Nombre del directorio>`
 
-## Paso 2
+## Paso 2:
 - Instala [NodeJS](https://nodejs.org/es/) en tu equipo (si lo tienes instalado continua la documentacion).
 - Abre el directorio del repositorio en la terminal y ejecuta lo siguiente:
 
-   *Esto instalara los modulos de node necesarios para ejecutar el proyecto:
+   **Esto instalara los modulos de node necesarios para ejecutar el proyecto:
    ##### `npm install`
 
-   *Y por ultimo con todo lo necesario instalado podemos proceder a ejecutar el proyecto ejecutando el siguiente comando:
+   **Y por ultimo con todo lo necesario instalado podemos proceder a ejecutar el proyecto ejecutando el siguiente comando:
    ##### `npm start`
 
 
