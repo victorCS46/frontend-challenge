@@ -1,29 +1,41 @@
-Como iniciar el proyecto en tu equipo:
+# Start the project in your system
+Here you got a documentation about how to run the repository's project in your system
 
-## Paso 1:
+## You need to install
+ - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+ - [NodeJS](https://nodejs.org/es/)
+ 
+ If you have installed these before then let's go with the first step
 
- - Si no tienes ```git``` Instalado puedes descargar el repositorio haciendo [click aqui](https://github.com/victorCS46/frontend-challenge/archive/master.zip). 
+##  Step 1. Clone or download the repository:
 
- - Si tienes ```git``` instalado en tu equipo, abre la terminal y dirigite al directorio que deseas almacenar el repositorio
-   y Ejecuta el siguiente comando:
+ - (If you haven't installed ```git``` yet. Don't worry you can download the repository in this **[Link]**)(https://github.com/victorCS46/frontend-challenge/archive/master.zip). 
+
+ - Open the terminal and go to the directory where you want to store the repository
+   then execute this command:
    
    ```sh
    git clone git@github.com:victorCS46/frontend-challenge.git
    ```
   
- - (Opcional): Si quieres clonar el repositorio pero con un nombre para el directorio a tu gusto puedes ejecutarlo de la   siguiente manera:
-    ##### `git clone git@github.com:victorCS46/frontend-challenge.git <Nombre del directorio>`
+ - If you want name the dir with a name that you want execute this:
+    ```sh
+    git clone git@github.com:victorCS46/frontend-challenge.git <dir name>
+    ```
 
-## Paso 2:
-- Instala [NodeJS](https://nodejs.org/es/) en tu equipo (si lo tienes instalado continua la documentacion).
+## Step 2. Run the project:
 
-- Abre el directorio del repositorio en la terminal y ejecuta lo siguiente:
+ - In terminal. Go to the directory where you have the repository and then execute this command:
+   ```sh
+   npm install
+   ```
+   This will install all the node modules that we need to run the project
 
-   *=> Esto instalara los modulos de node necesarios para ejecutar el proyecto:*
-   ##### `npm install`
-
-   *=> Y por ultimo con todo lo necesario instalado podemos proceder a ejecutar el proyecto ejecutando el siguiente comando:*
-   ##### `npm start`
-
+ - Now to start running the project we'll execute this last command 
+   ```sh
+   npm start
+   ```
+   After execute this command, you will see how your browser open a new window (or a tab if you have your browser running)
+   with the URL **[http://localhost:3000](http://localhost:3000)**
 
 ## That's all folks ;)
