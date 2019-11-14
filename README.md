@@ -2,9 +2,11 @@ Como iniciar el proyecto en tu equipo:
 
 ## Paso 1:
  - Si tienes ```git``` instalado en tu equipo, abre la terminal y dirigite al directorio que deseas almacenar el repositorio
+  y Ejecuta el siguiente comando:
+  ## `git clone git@github.com:victorCS46/frontend-challenge.git`
   
-  (Si no tienes ```git``` instalado no hay problema, puedes descargar el repositorio Haciendo [Click aqui]  (https://github.com/victorCS46/frontend-challenge/archive/master.zip))
- - 
+  (Opcional): Si quieres clonar el repositorio pero con un nombre para el directorio a tu gusto puedes ejecutarlo de la siguiente manera:
+  ## `git clone git@github.com:victorCS46/frontend-challenge.git <Nombre del directorio>`
 
 ## Available Scripts
 
