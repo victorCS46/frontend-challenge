@@ -9,7 +9,7 @@ Here you got a documentation about how to run the repository's project in your s
 
 ##  Step 1. Clone or download the repository:
 
- - (If you haven't installed ```git``` yet. Don't worry you can download the repository in this **[Link]**)(https://github.com/victorCS46/frontend-challenge/archive/master.zip). 
+ - (If you haven't installed ```git``` yet. Don't worry you can download the repository in this **[Link](https://github.com/victorCS46/frontend-challenge/archive/master.zip)).** 
 
  - Open the terminal and go to the directory where you want to store the repository
    then execute this command:
