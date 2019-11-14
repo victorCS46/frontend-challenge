@@ -2,8 +2,8 @@
 Here you got a documentation about how to run the repository's project in your system
 
 ## You need to install
- - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
- - [NodeJS](https://nodejs.org/es/)
+ - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) v2.21.0
+ - [NodeJS](https://nodejs.org/es/) v12.13.0
  
  If you have installed these before then let's go with the first step
 
