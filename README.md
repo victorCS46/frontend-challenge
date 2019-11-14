@@ -2,7 +2,7 @@ Como iniciar el proyecto en tu equipo:
 
 ## Paso 1:
  - Si tienes ```git``` instalado en tu equipo, abre la terminal y dirigite al directorio que deseas almacenar el repositorio.
- (Si no tienes ```git``` instalado puedes descargar el repositorio Haciendo [Click aqui](https://github.com/victorCS46/frontend-challenge/archive/master.zip))
+    (Si no tienes ```git``` instalado puedes descargar el repositorio Haciendo [Click aqui](https://github.com/victorCS46/frontend-challenge/archive/master.zip))
  - 
 
 ## Available Scripts
