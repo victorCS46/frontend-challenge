@@ -6,7 +6,10 @@ Como iniciar el proyecto en tu equipo:
 
  - Si tienes ```git``` instalado en tu equipo, abre la terminal y dirigite al directorio que deseas almacenar el repositorio
    y Ejecuta el siguiente comando:
-   ##### ```git clone git@github.com:victorCS46/frontend-challenge.git```
+   
+   ```sh
+   git clone git@github.com:victorCS46/frontend-challenge.git
+   ```
   
  - (Opcional): Si quieres clonar el repositorio pero con un nombre para el directorio a tu gusto puedes ejecutarlo de la   siguiente manera:
     ##### `git clone git@github.com:victorCS46/frontend-challenge.git <Nombre del directorio>`
