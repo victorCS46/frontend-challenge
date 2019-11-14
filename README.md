@@ -15,10 +15,10 @@ Como iniciar el proyecto en tu equipo:
 - Instala [NodeJS](https://nodejs.org/es/) en tu equipo (si lo tienes instalado continua la documentacion).
 - Abre el directorio del repositorio en la terminal y ejecuta lo siguiente:
 
-   Esto instalara los modulos de node necesarios para ejecutar el proyecto
+   *Esto instalara los modulos de node necesarios para ejecutar el proyecto:
    ##### `npm install`
 
-   Y por ultimo con todo lo necesario instalado podemos proceder a ejecutar el proyecto ejecutando el siguiente comando
+   *Y por ultimo con todo lo necesario instalado podemos proceder a ejecutar el proyecto ejecutando el siguiente comando:
    ##### `npm start`
 
 
