@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Como iniciar el proyecto en tu equipo:
+
+## Paso 1:
+Si tienes ```git```
 
 ## Available Scripts
 
